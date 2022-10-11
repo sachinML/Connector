@@ -21,6 +21,13 @@ def download_data(path):
         with open(file_location, "w+") as file:
             json.dump(data, file)
             
+def get_data(response, path):
+    if response.status == 200:
+        data = response.data
+        return json.loads(data)
+    else:
+        return handle_api_error(response, path)
+            
  
 print("enter the url: ")
 api = input()
