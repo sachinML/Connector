@@ -22,12 +22,9 @@ def get_data(response, path):
         
 
 def download_data(path):
-
     valid = validators.url(path)
-    
     if not valid:
         print("Url is Invalid")
-        
     else:
         http = urllib3.PoolManager()
         response_api = http.request("GET", path, retries=urllib3.util.Retry(3))
