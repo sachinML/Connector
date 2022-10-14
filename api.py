@@ -4,6 +4,14 @@ import validators
 import urllib3
 from requests.auth import HTTPBasicAuth
 
+def handle_api_error(response, path):
+    if response.status == 400:
+        print("According to the API, your request is malformed.")
+    elif response.status == 401:
+        print("Unauthorized error, give the proper credentials.")
+        authorized_response = requests.get(path, auth=HTTPBasicAuth(input(), input()))
+        return json.loads(authorized_response.text)
+
 
 def get_data(response, path):
     if response.status == 200:
@@ -12,14 +20,6 @@ def get_data(response, path):
     else:
         return handle_api_error(response, path)
         
-        
-def handle_api_error(response, path):
-    if response.status == 400:
-        print("According to the API, your request is malformed.")
-    elif response.status == 401:
-        print("Unauthorized error, give the proper credentials.")
-        authorized_response = requests.get(path, auth=HTTPBasicAuth(input(), input()))
-        return json.loads(authorized_response.text)
 
 def download_data(path):
 
