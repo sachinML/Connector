@@ -11,6 +11,16 @@ def handle_api_error(response, path):
         print("Unauthorized error, give the proper credentials.")
         authorized_response = requests.get(path, auth=HTTPBasicAuth(input(), input()))
         return json.loads(authorized_response.text)
+    
+    elif response.status == 403:
+        print("The client attempts a resource interaction that is outside of its permitted scope")
+        print("contact with the developers!")
+    elif response.status == 404:
+        print("Client Error: Bad Request for url") 
+    elif 500 <= response.status < 600:
+        print("Sorry, there seems to be an internal issue with the API.")
+    else:
+        print(f"Got an unexpected status code from the API (`{response.status}`).")
 
 
 def get_data(response, path):
