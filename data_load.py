@@ -5,7 +5,7 @@ from botocore.exceptions import ClientError
 import logging
 
 directory = "C:\\Users\\Visitor\\API\\tmp"
-
+# delete content from the bucket(if any exist in prior)
 try:
     my_bucket = s3.Bucket('storeapidata')
     my_bucket.objects.all().delete()
