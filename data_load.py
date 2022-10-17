@@ -4,3 +4,5 @@ import os
 from botocore.exceptions import ClientError
 import logging
 
+directory = "C:\\Users\\Visitor\\API\\tmp"
+
