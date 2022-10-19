@@ -21,4 +21,11 @@ try:
     print(json.dumps(response, indent=2))
 except ClientError as e:
     print(logging.error(e))
+response = client.create_bucket(
+    ACL='private',
+    Bucket='storeapidata',
+    CreateBucketConfiguration={
+        'LocationConstraint': 'us-west-2',
+    },
+)
 
