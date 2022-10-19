@@ -13,6 +13,7 @@ try:
     print("Objects from Bucket deleted Successfully.")
 except ClientError as e:
     print(logging.error(e))
+    
 try:
     response = client.delete_bucket(Bucket='storeapidata')
     print("Bucket Deleted Successfully")
