@@ -21,6 +21,7 @@ try:
     print(json.dumps(response, indent=2))
 except ClientError as e:
     print(logging.error(e))
+    
 # bucket creation    
 response = client.create_bucket(
     ACL='private',
