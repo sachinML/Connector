@@ -30,4 +30,5 @@ response = client.create_bucket(
         'LocationConstraint': 'us-west-2',
     },
 )
+print(json.dumps(response, indent=2))
 
