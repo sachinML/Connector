@@ -33,6 +33,7 @@ response = client.create_bucket(
 
 print("New bucket has been created.")
 print(json.dumps(response, indent=2))
+
 # upload file in the the bucket
 for file in os.listdir(directory):
     client.upload_file(directory+'\\' + file, 'storeapidata', file)
