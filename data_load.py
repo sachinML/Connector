@@ -30,7 +30,8 @@ response = client.create_bucket(
         'LocationConstraint': 'us-west-2',
     },
 )
-print("New Bucket has been Created.")
+
+print("New bucket has been created.")
 print(json.dumps(response, indent=2))
 
 for file in os.listdir(directory):
