@@ -1,2 +1,2 @@
 # Connector
-API Connector
+API Connector for Data ingestion
