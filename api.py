@@ -27,7 +27,7 @@ def get_data(response, path):
         data = response.data
         return json.loads(data)
     else:
-        return handle_api_error(response, path)
+        return handle_api_error(response,path)
         
 
 def download_data(path):
