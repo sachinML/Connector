@@ -17,7 +17,7 @@ def handle_api_error(response, path):
     elif response.status == 404:
         print("Client Error: Bad Request for url") 
     elif 500 <= response.status < 600:
-        print("Sorry, there seems to be an internal issue with the API.")
+        print("Sorry, There seems to be an internal issue with the API.")
     else:
         print(f"Got an unexpected status code from the API (`{response.status}`).")
 
