@@ -38,7 +38,7 @@ def download_data(path):
         http = urllib3.PoolManager()
         response_api = http.request("GET", path, retries=urllib3.util.Retry(3))
         data = get_data(response_api, path)
-        print("Give the file name: ")
+        print("Give the File name: ")
         file_name = input()
         file_location = "D:\\ApiC\\git\\API_VT" + "\\" + file_name + ".json"
         with open(file_location, "w+") as file:
