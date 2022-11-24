@@ -6,7 +6,7 @@ from requests.auth import HTTPBasicAuth
 
 def handle_api_error(response, path):
     if response.status == 400:
-        print("According to the API, your request is malformed.")
+        print("According to the API, your request is Malformed.")
     elif response.status == 401:
         print("Unauthorized error, give the proper credentials.")
         authorized_response = requests.get(path, auth=HTTPBasicAuth(input(), input()))
