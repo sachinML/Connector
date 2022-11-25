@@ -31,7 +31,7 @@ response = client.create_bucket(
     },
 )
 
-print("New bucket has been created.")
+print("New Bucket has been created.")
 print(json.dumps(response, indent=2))
 
 # upload file in the the bucket
