@@ -23,7 +23,7 @@ def handle_api_error(response, path):
 
 
 def get_data(response, path):
-    if response.status ==200:
+    if response.status==200:
         data = response.data
         return json.loads(data)
     else:
