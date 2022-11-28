@@ -14,7 +14,7 @@ def handle_api_error(response, path):
     elif response.status==403:
         print("The client attempts a resource interaction that is outside of its permitted scope")
         print("contact with the developers!")
-    elif response.status == 404:
+    elif response.status== 404:
         print("Client Error: Bad Request for url") 
     elif 500 <= response.status < 600:
         print("Sorry, There seems to be an internal issue with the API.")
