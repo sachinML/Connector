@@ -9,7 +9,7 @@ def handle_api_error(response, path):
         print("According to the API, your request is Malformed.")
     elif response.status==401:
         print("Unauthorized error, give the proper credentials.")
-        authorized_response= requests.get(path, auth=HTTPBasicAuth(input(), input()))
+        authorized_response=requests.get(path, auth=HTTPBasicAuth(input(), input()))
         return json.loads(authorized_response.text)
     elif response.status==403:
         print("The client attempts a resource interaction that is outside of its permitted scope")
