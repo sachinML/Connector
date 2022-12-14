@@ -31,7 +31,7 @@ def get_data(response, path):
         
 
 def download_data(path):
-    valid= validators.url(path)
+    valid=validators.url(path)
     if not valid:
         print("Url is Invalid")
     else:
