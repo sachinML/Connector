@@ -36,7 +36,7 @@ def download_data(path):
         print("Url is Invalid")
     else:
         http=urllib3.PoolManager()
-        response_api= http.request("GET", path, retries=urllib3.util.Retry(3))
+        response_api=http.request("GET", path, retries=urllib3.util.Retry(3))
         data = get_data(response_api, path)
         print("Give the File name: ")
         file_name = input()
