@@ -40,7 +40,7 @@ def download_data(path):
         data=get_data(response_api, path)
         print("Give the File name: ")
         file_name=input()
-        file_location = "D:\\ApiC\\API_VT" + "\\" + file_name + ".json"
+        file_location= "D:\\ApiC\\API_VT" + "\\" + file_name + ".json"
         with open(file_location, "w+") as file:
             json.dump(data, file)
             
