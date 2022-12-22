@@ -46,5 +46,5 @@ def download_data(path):
             
  
 print("enter the url: ")
-api = input()
+api= input()
 download_data(api)
