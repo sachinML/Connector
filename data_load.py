@@ -16,7 +16,7 @@ except ClientError as e:
     
 # delete bucket itself    
 try:
-    response= client.delete_bucket(Bucket='storeapidata')
+    response=client.delete_bucket(Bucket='storeapidata')
     print("Bucket Deleted Successfully")
     print(json.dumps(response, indent=2))
 except ClientError as e:
